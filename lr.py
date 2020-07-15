@@ -5,6 +5,12 @@ import sys
 
 def main():
 
+    '''
+    Implementation of Linear Regression using Gradient Descent, with varying alpha values and numbers of iterations.
+    Writes to an output csv file the outcome betas for each (alpha, # of iterations) setting.
+    Please run the file as follows: python lr.py data2.csv, results2.csv
+
+    '''
 
     _, input, output = sys.argv
 
@@ -21,7 +27,7 @@ def main():
     data['x1'], data['x2'] = feat1, feat2
 
     alphas = [0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1, 5, 10]
-    MAX_ITER = 100
+    MAX_ITER = 60
 
     # helper function
     def f(x, betas):
@@ -64,6 +70,7 @@ def main():
             out.write(str(line))
             out.write('\n')
 
+    visualize_3d(data[['x1','x2','y']], lin_reg_weights = my_betas, feat1='x1', feat2='x2', labels = 'y', alpha = my_alpha)
 
 if __name__ == "__main__":
     main()
