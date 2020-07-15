@@ -1,0 +1,20 @@
+
+Linear Regression:
+
+I picked alpha_10 = 0.75, because I observed that the values seem to converge well with alphas around 0.5-1.
+I picked iterations = 40, because, despite being significantly smaller, it deviates only by ε ~ 0.0001 from the (0.5, 100) and (1,100) betas.
+
+
+Clustering:
+
+I used k1 = 2, k2 = 10, and k = 50:
+It can be seen how in the k = 2 case, there are only two distinct colors and the picture is very unclear.
+
+Significantly richer, the k = 10 case features the salient colors of the original picture.
+Still, it is apparent that many of the colors are missing and the picture generally seems distorted.
+
+In the k = 50 case, we can see that the reconstructed picture is virtually indistinguishable from the original, and it weighs about 10% less!
+
+Since this was all very new to me, I sought some advice online and definitely got some ideas from forums, as well as the sci-kit website.
+However, as asked, I implement it by myself.
+I did not delve much into the parameters of KMEANS, as the results were already pretty compelling to me.
