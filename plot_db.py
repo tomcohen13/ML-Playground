@@ -10,13 +10,6 @@ from mpl_toolkits.mplot3d import Axes3D
 """
 Author: Kelsey D'Souza
 
-This file contains two functions for visualizing 2-feature labeled datasets.
-Its purpose is to give you ideas on how to vizualize your data and use pandas
-and matplotlib, feel free to snippets of any code in here or import the file 
-into your programs.
-
-This file *does not* need to be included in your submission unless imported.
-
 visualize_scatter
 	Assumes binary labels and creates a line between the data using the given 
 	feature and bias weights. 
