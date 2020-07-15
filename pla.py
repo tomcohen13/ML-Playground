@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    '''The file should run as python pla.py data1.csv results1.csv or, generally, python pla.py [data_file] [results_file]'''
 
     results = []
     _, data, output = sys.argv
@@ -13,15 +14,15 @@ def main():
         df = pd.read_csv(data, header = None)
 
     except:
-        raise Exception("invalid csv file")
+        raise Exception("Invalid csv file")
 
     w, b = np.zeros(2), 0
 
     def f(x):
-        print(b + x.dot(w), b, x, w)
+        #computer y-hat using b + x·w
         return 1 if b + x.dot(w) > 0 else -1
 
-    #look until convergence
+    #loop until convergence
     while True:
 
         errors = 0
